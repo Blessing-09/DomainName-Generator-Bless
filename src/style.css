@@ -1,5 +1,62 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background-image: conic-gradient(from 300deg, rgb(242, 70, 18) 0%, rgba(255, 196, 70, 0.9) 50%, rgb(89, 161, 41) 90%);
+    height: 100vh;
+    width: 100%;
+    margin: auto 0;
 }
+
+.header {
+    border: 5px ridge black;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    opacity: 0.8;
+  }
+  
+  @keyframes example {
+    0%   { left: -10px; background-image: linear-gradient(yellow, green) }
+    50%  { left: 10px; background-image: linear-gradient(green, yellow) } /* Moves to the right */
+    100% { left: -10px; background-image: linear-gradient(yellow, green) } /* Moves back to the left */
+}
+.btn-group {
+    display: inline-block;
+    font-weight: bold;
+    text-shadow:  2px 2px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px outset black;
+    background-image: conic-gradient(from 360deg, rgba(18, 242, 66, 1) 0%, rgba(255, 255, 0, 0.9) 50%, rgba(70, 233, 45, 1) 100%);
+}
+#domain {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border: 15px outset black;
+    box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 0.6);
+    outline: 10px solid rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+li {
+    list-style: none;
+    counter-increment: Count;
+    position: relative; 
+    padding-left: 40px;
+    border: 1px inset black;
+  }
+  
+  li::before {
+    content: counter(Count, number);
+    position: absolute; 
+    left: 0; 
+    top: 50%;
+    transform: translateY(-50%);
+  }
