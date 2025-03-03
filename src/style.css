@@ -33,6 +33,11 @@ body{
     border-radius: 50%;
     border: 10px outset black;
     background-image: conic-gradient(from 360deg, rgba(18, 242, 66, 1) 0%, rgba(255, 255, 0, 0.9) 50%, rgba(70, 233, 45, 1) 100%);
+    transform: scale(1, 1);
+}
+.btn-group:active {
+    transform: scale(0.95, 0.95);
+    background-image: radial-gradient(rgb(255, 255, 255) 30%, green);
 }
 #domain {
     font-size: 15px;
