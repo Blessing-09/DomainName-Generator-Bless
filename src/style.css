@@ -8,6 +8,7 @@ body{
 }
 
 .header {
+    color : #120d01;
     border: 5px ridge black;
     width: 100%;
     text-align: center;

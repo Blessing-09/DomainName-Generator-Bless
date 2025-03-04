@@ -13,11 +13,15 @@ let pronoun = ['my', 'the'];
 let adj = ['cool', 'main'];
 let noun = ['website', 'page'];
 let site = ['.com', '.es'];
+let textColor = [' #900ab1', ' #850061', '#014d23'];
 
 function generateRandomDomain(arr) {
   return arr.sort(() => Math.random() - 0.5); // Properly shuffle the array
 }
-
+function randomColor(arr) {
+  let randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
+}
 
 
 function generateText() {
@@ -32,7 +36,7 @@ let randomSite = generateRandomDomain([...site]).slice(0, site.length);
     for (let j = 0; j < randomAdj.length; j++) {
       for (let k = 0; k < randomNoun.length; k++) {
         for (let l = 0; l < randomSite.length; l++) {
-       combination.push(`<li>www.${randomPronoun[i]}${randomAdj[j]}${randomNoun[k]}${randomSite[l]} ⩤</li>`);
+       combination.push(`<li style="color:${randomColor(textColor)};">www.${randomPronoun[i]}${randomAdj[j]}${randomNoun[k]}${randomSite[l]} ⩤</li>`);
       }
     }
   }
